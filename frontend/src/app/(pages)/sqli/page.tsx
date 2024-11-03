@@ -15,7 +15,7 @@ interface User {
   role: string;
 }
 
-export default function sqli() {
+const SQLi = () => {
   const [name, setName] = React.useState("");
   const [userData, setUserData] = React.useState<User[] | null>(null);
 
@@ -62,12 +62,12 @@ export default function sqli() {
           </span>
         <Code value="SELECT * FROM users WHERE username = '' OR '1'='1' AND password = 'password123';" language="sql" />
         <span>
-          In this example scenario, the condition <pre className="inline">'1'='1'</pre> always evaluates to true, and so the attacker successfully bypasses authentication to gain access into the application.
+          In this example scenario, the condition <pre className="inline">&apos;1&apos;=&apos;1&apos;</pre> always evaluates to true, and so the attacker successfully bypasses authentication to gain access into the application.
         </span>
 
         <h2 className="bg-gradient-to-r from-indigo-100 to-indigo-300 rounded w-max text-3xl px-3 py-px font-bold">TRY IT YOURSELF</h2>
         <span>
-          Given the name of a user, the input form below searches the SQL database to check if this user already exists. If yes, then their name and role are displayed. Try typing in "Alice" to see
+          Given the name of a user, the input form below searches the SQL database to check if this user already exists. If yes, then their name and role are displayed. Try typing in &quot;Alice&quot; to see
           the expected behaviour.
         </span>
       </div>
@@ -105,3 +105,5 @@ export default function sqli() {
     </>
   );
 }
+
+export default SQLi;

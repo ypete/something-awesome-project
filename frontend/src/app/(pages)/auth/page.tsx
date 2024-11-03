@@ -93,8 +93,8 @@ export default function Auth() {
           </ul>
         </span>
         <span>
-          Once you've signed in, take a look at the URL. Is it possible to change the unique identifier to gain 
-          access to another user's Bluecurity account?
+          Once you&apos;ve signed in, take a look at the URL. Is it possible to change the unique identifier to gain 
+          access to another user&apos;s Bluecurity account?
         </span>
       </div>
 

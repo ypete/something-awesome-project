@@ -40,7 +40,7 @@ export default function Admin({ params: paramsPromise }: { params: Promise<{ use
     }
     listAdmins();
     listUsers();
-  }, []);
+  }, [router]);
 
   React.useEffect(() => {
     const validateAdmin = async () => {
