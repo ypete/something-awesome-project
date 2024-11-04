@@ -3,15 +3,14 @@ const sqlite3 = require("sqlite3").verbose();
 const cors = require("cors");
 const path = require('path');
 const fs = require('fs');
+require('dotenv').config();
+
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors({
-  origin: "http://localhost:3001",
-  methods: ["GET", "POST"],
-}));
+app.use(cors());
 
 const db = new sqlite3.Database(":memory:");
 

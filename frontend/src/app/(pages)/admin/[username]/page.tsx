@@ -7,7 +7,7 @@ import Nav from "@/app/components/Nav";
 import NameCard from "@/app/components/NameCard";
 import Footer from "@/app/components/Footer";
 
-const url = "http://localhost:3000";
+const url = process.env.NEXT_PUBLIC_API_URL;
 
 export default function Admin({ params: paramsPromise }: { params: Promise<{ username: string }> }) {
   const params = React.use(paramsPromise);

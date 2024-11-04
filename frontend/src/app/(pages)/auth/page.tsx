@@ -9,7 +9,7 @@ import Code from "@/app/components/Code";
 import Emphasis from "@/app/components/Emphasis";
 import NameCard from "@/app/components/NameCard";
 
-const url = "http://localhost:3000";
+const url = process.env.NEXT_PUBLIC_API_URL;
 
 export default function Auth() {
   const router = useRouter();

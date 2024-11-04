@@ -6,7 +6,7 @@ import Footer from "@/app/components/Footer";
 import Nav from "@/app/components/Nav";
 import React from "react";
 
-const url = "http://localhost:3000";
+const url = process.env.NEXT_PUBLIC_API_URL;
 
 const Resources: React.FC = () => {
   const [resourceUrl, setResourceUrl] = React.useState("");

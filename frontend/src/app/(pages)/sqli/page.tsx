@@ -8,7 +8,7 @@ import NameCard from "@/app/components/NameCard";
 import Footer from "@/app/components/Footer";
 import Emphasis from "@/app/components/Emphasis";
 
-const url = "http://localhost:3000";
+const url = process.env.NEXT_PUBLIC_API_URL;
 
 interface User {
   name: string;

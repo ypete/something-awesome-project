@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import Nav from "../../components/Nav";
 import Footer from "@/app/components/Footer";
 
-const url = "http://localhost:3000";
+const url = process.env.NEXT_PUBLIC_API_URL;
 
 export default function Register() {
   const router = useRouter();
