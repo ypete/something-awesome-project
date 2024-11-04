@@ -10,7 +10,6 @@ export default function Home() {
         <Nav/>
       </div>
       <div className="absolute top-0 left-0 h-screen font-bold bg-[url('/banner.jpg')] relative bg-cover bg-center bg-fixed">
-        {/* <Image src="/banner.jpg" alt="banner" layout="fill" objectFit="cover" className="fixed" /> */}
         <div className="z-10 h-full flex flex-col items-center justify-center">
           <h2 className="bg-gradient-to-r from-indigo-100 to-indigo-300 rounded w-max text-3xl px-3 py-px my-2">EXPLORE</h2>
           <h1 className="text-5xl text-white"><i className="fa-solid fa-shield-halved"/> WEB SECURITY</h1>

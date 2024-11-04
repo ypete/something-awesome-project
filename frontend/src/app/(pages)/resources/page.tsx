@@ -76,7 +76,7 @@ const Resources: React.FC = () => {
 
       <div className="flex flex-col justify-center items-center mx-10 px-24 py-6 text-lg space-y-6">
         <span>
-          Now, let&apos;s try a directory traversal attack. What happens if you search for the following &quot;image&quot;? Are you allowed to download it?
+          Now, let&apos;s try a directory traversal attack. What happens if you search for the following &quot;image&quot;? Are you able to download it?
         </span>
       </div>
 
